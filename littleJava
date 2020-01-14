@@ -1,0 +1,28 @@
+/*
+`* Kyle Kent
+ */
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class littleJava {
+  public static void main(String [] args){
+    int userNum = -1;
+    int count = 0;
+    Random rand = new Random();
+    Scanner scan = new Scanner(System.in);
+    
+    System.out.println("Enter a number from 1 - 100 for the computer to guess");
+    userNum = scan.nextInt();
+    scan.close();
+    
+    while(true){
+      int guess = rand.nextInt(100) + 1;
+      count++;
+      if(guess == userNum){
+        break;
+      }
+    }
+  }
+  System.out.pritln("The computer got your number in " + count + " guesses!");
+}
